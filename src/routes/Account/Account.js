@@ -8,7 +8,7 @@ const TabPane = Tabs.TabPane;
 const data = [{
   key: '1',
   na: '昵称',
-  j: '未来学院',
+  j: '王业伟',
 }, {
   key: '2',
   na: '性别',
@@ -16,7 +16,7 @@ const data = [{
 }, {
   key: '3',
   na: '个人简介',
-  j: '不是渣就是坏的交大诈骗团伙',
+  j: 'BTCU黑帮',
 }, {
   key: '3',
   na: '身份证ID（个人实名认证）',
