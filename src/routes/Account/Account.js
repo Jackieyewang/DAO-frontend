@@ -397,8 +397,8 @@ export default class Account extends Component{
                 >
                     <Meta
                     avatar={<Avatar src={require('../../image/avatar.jpg')} />}
-                    title="未来学院"
-                    description="一个去中心化的知识分享社区"
+                    title="王业伟"
+                    description="平头哥"
                     />
                 </Card>
             </Col>
