@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: hsl(220, 88%, 66%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#btculogo {
+  background-color: hsl(140, 89%, 51%);
+  width: 66px;
+  height: 59px
+}
+
+#erwma {
+  width: 200px;
+  height: 200px
 }

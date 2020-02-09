@@ -3,8 +3,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
-
+import {Layout, Col, Row, Menu, Icon, Modal, Form, Input,
+    Tooltip, Tabs, Button, Checkbox} from 'antd'
 import Home from '../../routes/Home/Home.js';
 import Publish from '../../routes/Publish/Publish.js';
 import Account from '../../routes/Account/Account.js';
@@ -22,8 +22,21 @@ export default class DefaultLayout extends Component{
     render(){
         return (
             <Layout>
-                <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+                <Header style={{ position: 'fixed', zIndex: 1, width: '100%'}}>
                     <div className="logo" />
+                    <Row gutter={5}>
+                            <Col span={1}>
+                                <img id='btculogo' src={require('../../image/btcu.png')} alt='btculogo'/>
+                            </Col>
+                            <Col span={4}>
+                        <Input.Search
+                            id='headSearch'
+                            placeholder='搜索：'
+                            style={{width: 100 + '%'}}
+                            onSearch={value => console.log(value)}
+                        />
+                    </Col>
+                    <Col span={7}>
                     <Menu
                         theme="dark"
                         mode="horizontal"
@@ -31,16 +44,24 @@ export default class DefaultLayout extends Component{
                         style={{ lineHeight: '64px' }}
                         onClick={this.handleClick}
                     >
-                        <Menu.Item key="1">
+                      <Menu.Item key="1">
                             <Link  to="/home">社区首页</Link>
                         </Menu.Item>
                         <Menu.Item key="2">
-                            <Link  to="/home/publish">发布文章</Link>
+                            <Link  to="/home/publish">嘻呦西柚</Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                            <Link  to="/home/account">个人信息</Link>
+                            <Link  to="/home/account">资源宝阁</Link>
+                        </Menu.Item>
+                        <Menu.Item key="4">
+                            <Link to="/home/account">个人中心</Link>
                         </Menu.Item>
                     </Menu>
+                    </Col>
+                    <Col span={15}>
+                        
+                    </Col>
+                    </Row>
                 </Header>
                 <Content>
                     <div style={{padding: 80, minHeight: 500 }} className = "content-warp">
@@ -51,7 +72,7 @@ export default class DefaultLayout extends Component{
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    Ant Design ©2018 Created by CJK
+                    Ant Design ©2020 Created by BTCU
                 </Footer>
             </Layout>
         )
